@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>أميمة & أشرف — دعوة</title>
+<title>أميمة & أشرف</title>
 <meta name="theme-color" content="#c98487">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap">
 <style>
 :root{--rose:#c98286;--rose2:#e9b9b7;--cream:#fff9f6;--ink:#563534;--gold:#b4874a;--card:#fff;--line:#edd7d3;--page:#eadfdb;--soft:#f1ddda;--softink:#70423f}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--cream:#2a1d1d;--ink:#f3e3e0;--card:#382626;--line:#553838;--page:#171010;--soft:#4a3030;--softink:#f0d5d1;--gold:#d9b06f}}
+:root[data-theme="dark"]{--cream:#2a1d1d;--ink:#f3e3e0;--card:#382626;--line:#553838;--page:#171010;--soft:#4a3030;--softink:#f0d5d1;--gold:#d9b06f}
 *{box-sizing:border-box}html{height:100%}
 body{margin:0;min-height:100%;background:var(--page);color:var(--ink);font-family:Cairo,system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 .app{width:min(480px,100%);margin:auto;background:var(--cream);min-height:100vh;box-shadow:0 0 45px #0002;position:relative;overflow:hidden}
-section{display:none;min-height:100vh;padding:28px 20px 40px;position:relative}
+section{display:none;min-height:100vh;padding:28px 20px 90px;position:relative}
 section.on{display:block;animation:in .5s ease}
 #opening.on,#main.on{display:flex;align-items:center;justify-content:center;text-align:center}
 @keyframes in{from{opacity:0}to{opacity:1}}
@@ -21,13 +22,13 @@ h1{font:700 30px Amiri,serif;margin:10px 0;line-height:1.6}
 .center{text-align:center}.muted{opacity:.8;font-size:14px;line-height:1.9}.gold{color:var(--gold)}
 .logo{font-size:13px;font-weight:600;color:var(--gold)}
 .btn{border:0;border-radius:30px;padding:13px 20px;font:700 14px Cairo,sans-serif;cursor:pointer;text-decoration:none;display:block;text-align:center;margin:10px 0;width:100%}
-.btn:focus-visible,.back:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btn:focus-visible,.back:focus-visible,.langbtn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .primary{background:var(--rose);color:#fff;box-shadow:0 8px 20px #c9828640}.secondary{background:var(--soft);color:var(--softink)}
 .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
 .back{border:0;background:none;font-size:22px;color:var(--ink);cursor:pointer;padding:4px 8px}
-.lang{display:inline-block;margin-top:8px;font-size:13px;color:var(--gold);text-decoration:underline}
+.langbtn{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));height:44px;padding:0 18px;border-radius:22px;border:1px solid var(--gold);background:var(--card);color:var(--gold);font:700 14px Cairo,sans-serif;z-index:20;cursor:pointer;box-shadow:0 6px 20px #0002}
 #opening{background:radial-gradient(circle at 50% 35%,var(--cream),#f7e7e3 70%,#ecd2ce)}
-@media(prefers-color-scheme:dark){#opening{background:radial-gradient(circle at 50% 35%,#3a2828,#241818)}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #opening{background:radial-gradient(circle at 50% 35%,#3a2828,#241818)}}
 .env{width:290px;height:195px;background:#f3d9d5;position:relative;margin:26px auto 34px;border-radius:10px;box-shadow:0 18px 45px #70403b30;perspective:800px;direction:ltr}
 .env .front{position:absolute;inset:0;background:#fff0ed;clip-path:polygon(0 100%,0 40%,50% 86%,100% 40%,100% 100%);border-radius:0 0 10px 10px;z-index:2}
 .env .flap{position:absolute;left:0;right:0;top:0;height:60%;background:#e8c4bf;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease,z-index 0s .4s;z-index:4}
@@ -36,7 +37,7 @@ h1{font:700 30px Amiri,serif;margin:10px 0;line-height:1.6}
 .opened .flap{transform:rotateX(180deg);z-index:0}.opened .seal{opacity:0}.opened .card-in{transform:translateY(-70px)}
 .guest{font:700 24px Amiri,serif;color:var(--rose);min-height:36px}
 .hero{background:linear-gradient(var(--cream),#f6e3df)}
-@media(prefers-color-scheme:dark){.hero{background:linear-gradient(#2a1d1d,#3a2626)}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(#2a1d1d,#3a2626)}}
 .names{font:700 46px/1.3 Amiri,serif;color:var(--rose);margin:6px 0}
 .date{margin:14px 0;font-weight:700;font-size:16px}
 .count{display:flex;justify-content:center;gap:8px;margin:18px 0}
@@ -62,6 +63,8 @@ input,textarea,select{width:100%;padding:14px;border-radius:12px;border:1px soli
 .err{color:#b3261e;font-size:13px;min-height:16px;margin:-8px 0 8px}
 footer{text-align:center;padding:24px 0 0;font-size:13px;opacity:.7}
 .music{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--rose);color:#fff;z-index:20;box-shadow:0 6px 20px #0003;display:none;cursor:pointer}
+html[lang="fr"] .ar,html[lang="fr"] h1,html[lang="fr"] .quote,html[lang="fr"] .names,html[lang="fr"] .guest{letter-spacing:.01em}
+html[lang="fr"] .names{font-size:40px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -70,92 +73,149 @@ footer{text-align:center;padding:24px 0 0;font-size:13px;opacity:.7}
 
 <section id="opening" class="on">
 <div style="position:relative;z-index:1;width:100%">
-<div class="logo">دعوة رقمية</div>
-<div class="env" id="env"><div class="card-in">أ & أ</div><div class="front"></div><div class="flap"></div><div class="seal">♡</div></div>
+<div class="logo" data-k="logo"></div>
+<div class="env" id="env"><div class="card-in" data-k="mono"></div><div class="front"></div><div class="flap"></div><div class="seal">♡</div></div>
 <div class="guest" id="guest"></div>
-<div class="ar" style="font-size:28px;font-weight:700">دعوة خاصة لكم</div>
-<p class="muted">افتحوا الظرف لتكتشفوا تفاصيل زفافنا.</p>
-<button class="btn primary" onclick="openInvite()">فتح الدعوة</button>
-<a class="lang" href="index.html">Français</a>
+<div class="ar" style="font-size:28px;font-weight:700" data-k="inv"></div>
+<p class="muted" data-k="openHint"></p>
+<button class="btn primary" onclick="openInvite()" data-k="openBtn"></button>
 </div>
 </section>
 
 <section id="main" class="hero">
 <div style="position:relative;z-index:1;width:100%">
 <div class="gold" style="font-size:24px">✦</div>
-<h1 class="ar" style="font-size:26px;font-weight:400">باسم الله نبدأ، وببركته نمضي<br>في يومٍ من أجمل أيام العمر<br><br>نعلن عقد قران</h1>
-<div class="names">أميمة & أشرف</div>
-<div class="date">السبت 10 أكتوبر 2026</div>
-<p class="muted">يسعدنا أن ندعوكم لمشاركتنا هذا اليوم الاستثنائي.</p>
-<div class="count" dir="rtl">
-<div><strong id="d">--</strong><span>أيام</span></div>
-<div><strong id="h">--</strong><span>ساعات</span></div>
-<div><strong id="m">--</strong><span>دقائق</span></div>
-<div><strong id="s">--</strong><span>ثوانٍ</span></div>
+<h1 class="ar" style="font-size:26px;font-weight:400" data-k="intro"></h1>
+<div class="names" data-k="names"></div>
+<div class="date" data-k="date"></div>
+<p class="muted" data-k="joy"></p>
+<div class="count">
+<div><strong id="d">--</strong><span data-k="cd0"></span></div>
+<div><strong id="h">--</strong><span data-k="cd1"></span></div>
+<div><strong id="m">--</strong><span data-k="cd2"></span></div>
+<div><strong id="s">--</strong><span data-k="cd3"></span></div>
 </div>
-<button class="btn primary" onclick="go('details')">اكتشفوا الدعوة</button>
+<button class="btn primary" onclick="go('details')" data-k="discover"></button>
 </div>
 </section>
 
 <section id="details">
-<div class="nav"><b>أميمة & أشرف</b><button class="back" onclick="go('main')" aria-label="رجوع">×</button></div>
-<div class="center"><div class="logo">يومنا</div><h1>التفاصيل</h1></div>
-<p class="quote">«قلبان وحكاية واحدة. حضوركم هو أجمل هدية لنا.»</p>
+<div class="nav"><b data-k="names"></b><button class="back" onclick="go('main')" aria-label="×">×</button></div>
+<div class="center"><div class="logo" data-k="ourDay"></div><h1 data-k="details"></h1></div>
+<p class="quote" data-k="quote"></p>
 <div class="cards">
-<div class="card"><b>📅 التاريخ</b>السبت 10 أكتوبر 2026</div>
-<div class="card"><b>🕰️ الوقت</b>ابتداءً من الساعة 14:00</div>
-<div class="card"><b>📍 المكان</b>قاعة الحفلات<br><span class="muted">افتحوا المسار في خرائط جوجل</span></div>
-<div class="card"><b>👗 اللباس</b>أنيق — قفطان أو تكشيطة أو بدلة. الألوان الهادئة (باستيل) مرحّب بها.</div>
+<div class="card"><b data-k="cDate"></b><span data-k="date"></span></div>
+<div class="card"><b data-k="cTime"></b><span data-k="time"></span></div>
+<div class="card"><b data-k="cPlace"></b><span data-k="hall"></span><br><span class="muted" data-k="hallHint"></span></div>
+<div class="card"><b data-k="cDress"></b><span data-k="dress"></span></div>
 </div>
-<a class="btn primary" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D8%B2%D9%81%D8%A7%D9%81%20%D8%A3%D9%85%D9%8A%D9%85%D8%A9%20%D9%88%D8%A3%D8%B4%D8%B1%D9%81&dates=20261010T140000/20261011T000000&details=%D9%8A%D8%B3%D8%B9%D8%AF%D9%86%D8%A7%20%D8%A3%D9%86%20%D9%86%D8%AF%D8%B9%D9%88%D9%83%D9%85.&location=%D9%82%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AD%D9%81%D9%84%D8%A7%D8%AA">📆 إضافة إلى التقويم</a>
-<button class="btn secondary" onclick="go('location')">📍 عرض الموقع</button>
-<button class="btn secondary" onclick="go('program')">🕐 عرض البرنامج</button>
-<button class="btn secondary" onclick="go('rsvp')">💌 تأكيد حضوري</button>
+<a class="btn primary" id="calBtn" target="_blank" rel="noopener" href="#" data-k="addCal"></a>
+<button class="btn secondary" onclick="go('location')" data-k="seeLoc"></button>
+<button class="btn secondary" onclick="go('program')" data-k="seeProg"></button>
+<button class="btn secondary" onclick="go('rsvp')" data-k="rsvpBtn"></button>
 </section>
 
 <section id="location">
-<div class="nav"><b>الموقع</b><button class="back" onclick="go('details')" aria-label="رجوع">→</button></div>
-<div class="center"><h1>لنلتقِ هناك</h1><p class="muted">المسوا الخريطة لفتح المسار.</p></div>
-<a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7" aria-label="فتح في خرائط جوجل"><div class="road"></div><div class="pin">📍</div><div class="tag">قاعة الحفلات</div></a>
-<a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7">فتح في خرائط جوجل</a>
-<button class="btn secondary" onclick="go('program')">المتابعة إلى البرنامج</button>
+<div class="nav"><b data-k="navLoc"></b><button class="back" onclick="go('details')" data-k="back"></button></div>
+<div class="center"><h1 data-k="meet"></h1><p class="muted" data-k="tapMap"></p></div>
+<a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7"><div class="road"></div><div class="pin">📍</div><div class="tag" data-k="hall"></div></a>
+<a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7" data-k="openMaps"></a>
+<button class="btn secondary" onclick="go('program')" data-k="toProg"></button>
 </section>
 
 <section id="program">
-<div class="nav"><b>البرنامج</b><button class="back" onclick="go('details')" aria-label="رجوع">→</button></div>
-<div class="center"><div class="logo">سهرة نتقاسمها معًا</div><h1>البرنامج</h1></div>
+<div class="nav"><b data-k="navProg"></b><button class="back" onclick="go('details')" data-k="back"></button></div>
+<div class="center"><div class="logo" data-k="progLogo"></div><h1 data-k="navProg"></h1></div>
 <div class="timeline">
-<div class="event"><b>14:00</b><br>استقبال الضيوف</div>
-<div class="event"><b>18:00</b><br>المراسم</div>
-<div class="event"><b>20:00</b><br>العشاء</div>
-<div class="event"><b>22:00</b><br>سهرة موسيقية</div>
-<div class="event"><b>00:00</b><br>نهاية الحفل</div>
+<div class="event"><b>14:00</b><br><span data-k="e1"></span></div>
+<div class="event"><b>18:00</b><br><span data-k="e2"></span></div>
+<div class="event"><b>20:00</b><br><span data-k="e3"></span></div>
+<div class="event"><b>22:00</b><br><span data-k="e4"></span></div>
+<div class="event"><b>00:00</b><br><span data-k="e5"></span></div>
 </div>
-<button class="btn primary" onclick="go('rsvp')">💌 تأكيد حضوري</button>
+<button class="btn primary" onclick="go('rsvp')" data-k="rsvpBtn"></button>
 </section>
 
 <section id="rsvp">
-<div class="nav"><b>التأكيد</b><button class="back" onclick="go('details')" aria-label="رجوع">→</button></div>
-<div class="center"><div class="logo">تأكيد الحضور</div><h1>حضوركم</h1><p class="muted">يرجى الرد قبل 1 أكتوبر 2026.</p></div>
-<label for="name">الاسم</label><input id="name" placeholder="الاسم الكامل" autocomplete="name">
+<div class="nav"><b data-k="navRsvp"></b><button class="back" onclick="go('details')" data-k="back"></button></div>
+<div class="center"><div class="logo" data-k="rsvpLogo"></div><h1 data-k="rsvpTitle"></h1><p class="muted" data-k="deadline"></p></div>
+<label for="name" data-k="lName"></label><input id="name" data-ph="phName" autocomplete="name">
 <div class="err" id="err"></div>
-<label for="answer">ردّكم</label><select id="answer"><option>سأحضر إن شاء الله ✅</option><option>لن أتمكن من الحضور ❌</option></select>
-<label for="people">عدد الأشخاص</label><input id="people" type="number" inputmode="numeric" min="1" max="10" value="1">
-<label for="msg">رسالة (اختياري)</label><textarea id="msg" rows="4" placeholder="كلمة صغيرة للعروسين..."></textarea>
-<button class="btn primary" onclick="rsvp()">إرسال ردّي عبر واتساب</button>
-<button class="btn secondary" onclick="share()">مشاركة الدعوة</button>
-<div id="success" class="success">ردّكم جاهز. سيُفتح واتساب الآن.</div>
-<footer>شكرًا لكونكم جزءًا من قصتنا ♥</footer>
+<label for="answer" data-k="lAns"></label><select id="answer"><option data-k="o1"></option><option data-k="o2"></option></select>
+<label for="people" data-k="lPeople"></label><input id="people" type="number" inputmode="numeric" min="1" max="10" value="1">
+<label for="msg" data-k="lMsg"></label><textarea id="msg" rows="4" data-ph="phMsg"></textarea>
+<button class="btn primary" onclick="rsvp()" data-k="sendWa"></button>
+<button class="btn secondary" onclick="share()" data-k="share"></button>
+<div id="success" class="success" data-k="ok"></div>
+<footer data-k="thanks"></footer>
 </section>
 
 </div>
-<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="الموسيقى">♪</button>
+<button class="langbtn" id="langBtn" onclick="toggleLang()"></button>
+<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="♪">♪</button>
 <audio id="audio" loop></audio>
 
 <script>
 var PHONE="212752122418";
 var AUDIO_SRC="music.mp3";
 var WEDDING=new Date("2026-10-10T14:00:00");
+
+var T={
+ar:{
+title:"أميمة & أشرف — دعوة",logo:"دعوة رقمية",mono:"أ & أ",inv:"دعوة خاصة لكم",
+openHint:"افتحوا الظرف لتكتشفوا تفاصيل زفافنا.",openBtn:"فتح الدعوة",
+intro:"باسم الله نبدأ، وببركته نمضي<br>في يومٍ من أجمل أيام العمر<br><br>نعلن عقد قران",
+names:"أميمة & أشرف",date:"السبت 10 أكتوبر 2026",joy:"يسعدنا أن ندعوكم لمشاركتنا هذا اليوم الاستثنائي.",
+cd0:"أيام",cd1:"ساعات",cd2:"دقائق",cd3:"ثوانٍ",discover:"اكتشفوا الدعوة",
+ourDay:"يومنا",details:"التفاصيل",quote:"«قلبان وحكاية واحدة. حضوركم هو أجمل هدية لنا.»",
+cDate:"📅 التاريخ",cTime:"🕰️ الوقت",time:"ابتداءً من الساعة 14:00",
+cPlace:"📍 المكان",hall:"قاعة الحفلات",hallHint:"افتحوا المسار في خرائط جوجل",
+cDress:"👗 اللباس",dress:"أنيق — قفطان أو تكشيطة أو بدلة. الألوان الهادئة (باستيل) مرحّب بها.",
+addCal:"📆 إضافة إلى التقويم",seeLoc:"📍 عرض الموقع",seeProg:"🕐 عرض البرنامج",rsvpBtn:"💌 تأكيد حضوري",
+back:"→",navLoc:"الموقع",meet:"لنلتقِ هناك",tapMap:"المسوا الخريطة لفتح المسار.",openMaps:"فتح في خرائط جوجل",toProg:"المتابعة إلى البرنامج",
+navProg:"البرنامج",progLogo:"سهرة نتقاسمها معًا",e1:"استقبال الضيوف",e2:"المراسم",e3:"العشاء",e4:"سهرة موسيقية",e5:"نهاية الحفل",
+navRsvp:"التأكيد",rsvpLogo:"تأكيد الحضور",rsvpTitle:"حضوركم",deadline:"يرجى الرد قبل 1 أكتوبر 2026.",
+lName:"الاسم",phName:"الاسم الكامل",errName:"يرجى كتابة الاسم.",lAns:"ردّكم",o1:"سأحضر إن شاء الله ✅",o2:"لن أتمكن من الحضور ❌",
+lPeople:"عدد الأشخاص",lMsg:"رسالة (اختياري)",phMsg:"كلمة صغيرة للعروسين...",sendWa:"إرسال ردّي عبر واتساب",share:"مشاركة الدعوة",
+ok:"ردّكم جاهز. سيُفتح واتساب الآن.",thanks:"شكرًا لكونكم جزءًا من قصتنا ♥",
+hi:"عزيزي/عزيزتي ",wa:"دعوة أميمة & أشرف",wName:"الاسم",wAns:"الرد",wCount:"العدد",wMsg:"رسالة",
+shareTxt:"أنتم مدعوون إلى زفاف أميمة & أشرف، يوم 10 أكتوبر 2026.",shareTitle:"دعوة",
+calTitle:"زفاف أميمة وأشرف",calDet:"يسعدنا أن ندعوكم.",calLoc:"قاعة الحفلات",toggle:"Français"},
+fr:{
+title:"Oumaima & Achraf — Invitation",logo:"Invitation numérique",mono:"O & A",inv:"Une invitation pour vous",
+openHint:"Ouvrez l'enveloppe pour découvrir les détails de notre mariage.",openBtn:"Ouvrir l'invitation",
+intro:"Au nom de Dieu nous commençons,<br>en ce jour parmi les plus beaux de notre vie<br><br>nous célébrons l'union de",
+names:"Oumaima & Achraf",date:"Samedi 10 octobre 2026",joy:"Nous sommes heureux de vous inviter à partager ce jour exceptionnel.",
+cd0:"Jours",cd1:"Heures",cd2:"Minutes",cd3:"Secondes",discover:"Découvrir l'invitation",
+ourDay:"Notre jour",details:"Les détails",quote:"« Deux cœurs, une seule histoire. Votre présence est notre plus beau cadeau. »",
+cDate:"📅 Date",cTime:"🕰️ Heure",time:"À partir de 14h00",
+cPlace:"📍 Lieu",hall:"Salle des fêtes",hallHint:"Ouvrez l'itinéraire dans Google Maps",
+cDress:"👗 Tenue",dress:"Élégante — caftan, takchita ou costume. Les tons pastel sont les bienvenus.",
+addCal:"📆 Ajouter au calendrier",seeLoc:"📍 Voir le lieu",seeProg:"🕐 Voir le programme",rsvpBtn:"💌 Confirmer ma présence",
+back:"←",navLoc:"Le lieu",meet:"Rendez-vous là-bas",tapMap:"Touchez la carte pour ouvrir l'itinéraire.",openMaps:"Ouvrir dans Google Maps",toProg:"Continuer vers le programme",
+navProg:"Programme",progLogo:"Une soirée à partager",e1:"Accueil des invités",e2:"Cérémonie",e3:"Dîner",e4:"Soirée musicale",e5:"Fin de la fête",
+navRsvp:"Réponse",rsvpLogo:"Confirmation de présence",rsvpTitle:"Votre présence",deadline:"Merci de répondre avant le 1er octobre 2026.",
+lName:"Nom",phName:"Nom complet",errName:"Veuillez saisir votre nom.",lAns:"Votre réponse",o1:"Je serai présent(e) ✅",o2:"Je ne pourrai pas venir ❌",
+lPeople:"Nombre de personnes",lMsg:"Message (facultatif)",phMsg:"Un petit mot pour les mariés...",sendWa:"Envoyer ma réponse par WhatsApp",share:"Partager l'invitation",
+ok:"Votre réponse est prête. WhatsApp va s'ouvrir.",thanks:"Merci de faire partie de notre histoire ♥",
+hi:"Cher(e) ",wa:"Invitation Oumaima & Achraf",wName:"Nom",wAns:"Réponse",wCount:"Nombre",wMsg:"Message",
+shareTxt:"Vous êtes invités au mariage d'Oumaima & Achraf, le 10 octobre 2026.",shareTitle:"Invitation",
+calTitle:"Mariage d'Oumaima et Achraf",calDet:"Nous sommes heureux de vous inviter.",calLoc:"Salle des fêtes",toggle:"العربية"}
+};
+var L="ar",guestName="";
+
+function applyLang(l){
+  L=l;var t=T[l],h=document.documentElement;
+  h.lang=l;h.dir=l==="ar"?"rtl":"ltr";document.title=t.title;
+  document.querySelectorAll('[data-k]').forEach(function(e){e.innerHTML=t[e.getAttribute('data-k')]});
+  document.querySelectorAll('[data-ph]').forEach(function(e){e.placeholder=t[e.getAttribute('data-ph')]});
+  document.querySelectorAll('.back').forEach(function(b){if(b.dataset.k!==undefined||b.hasAttribute('data-k'))return});
+  document.getElementById('langBtn').textContent=t.toggle;
+  document.getElementById('guest').textContent=guestName?t.hi+guestName:'';
+  document.getElementById('calBtn').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(t.calTitle)+'&dates=20261010T140000/20261011T000000&details='+encodeURIComponent(t.calDet)+'&location='+encodeURIComponent(t.calLoc);
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+function toggleLang(){applyLang(L==="ar"?"fr":"ar")}
 
 function go(id){
   document.querySelectorAll('section').forEach(function(x){x.classList.remove('on')});
@@ -190,30 +250,35 @@ setInterval(tick,1000);tick();
   }
 })();
 
-// ضيف مخصص: أضيفوا ?invite=الاسم في نهاية الرابط
+// Lien personnalisé : ?invite=Nom  |  langue : ?lang=fr ou ?lang=ar
 (function(){
+  var l="ar";
   try{
-    var n=new URLSearchParams(location.search).get('invite');
-    if(n){document.getElementById('guest').textContent='عزيزي/عزيزتي '+n;document.getElementById('name').value=n}
+    var q=new URLSearchParams(location.search);
+    guestName=q.get('invite')||"";
+    if(guestName)document.getElementById('name').value=guestName;
+    var ql=q.get('lang'),sl=null;
+    try{sl=localStorage.getItem('lang')}catch(e){}
+    l=(ql==='fr'||ql==='ar')?ql:(sl==='fr'||sl==='ar')?sl:"ar";
   }catch(e){}
+  applyLang(l);
 })();
 
 function rsvp(){
-  var n=document.getElementById('name').value.trim();
-  if(!n){document.getElementById('err').textContent='يرجى كتابة الاسم.';document.getElementById('name').focus();return}
+  var t=T[L],n=document.getElementById('name').value.trim();
+  if(!n){document.getElementById('err').textContent=t.errName;document.getElementById('name').focus();return}
   document.getElementById('err').textContent='';
   var a=document.getElementById('answer').value;
   var p=document.getElementById('people').value||1;
   var msg=document.getElementById('msg').value.trim()||'-';
-  var text='دعوة أميمة & أشرف\n\nالاسم: '+n+'\nالرد: '+a+'\nالعدد: '+p+'\nرسالة: '+msg;
+  var text=t.wa+'\n\n'+t.wName+': '+n+'\n'+t.wAns+': '+a+'\n'+t.wCount+': '+p+'\n'+t.wMsg+': '+msg;
   window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(text),'_blank');
   document.getElementById('success').style.display='block';
 }
 function share(){
-  var t='أنتم مدعوون إلى زفاف أميمة & أشرف، يوم 10 أكتوبر 2026.';
-  var u=location.href.split('?')[0];
-  if(navigator.share){navigator.share({title:'دعوة',text:t,url:u}).catch(function(){})}
-  else{window.open('https://wa.me/?text='+encodeURIComponent(t+' '+u),'_blank')}
+  var t=T[L],u=location.href.split('?')[0]+'?lang='+L;
+  if(navigator.share){navigator.share({title:t.shareTitle,text:t.shareTxt,url:u}).catch(function(){})}
+  else{window.open('https://wa.me/?text='+encodeURIComponent(t.shareTxt+' '+u),'_blank')}
 }
 if(AUDIO_SRC){document.getElementById('audio').src=AUDIO_SRC;document.getElementById('musicBtn').style.display='block'}
 function toggleMusic(){var a=document.getElementById('audio');a.paused?a.play():a.pause()}
