@@ -65,6 +65,13 @@ footer{text-align:center;padding:24px 0 0;font-size:13px;opacity:.7}
 .music{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--rose);color:#fff;z-index:20;box-shadow:0 6px 20px #0003;display:none;cursor:pointer}
 html[lang="fr"] .ar,html[lang="fr"] h1,html[lang="fr"] .quote,html[lang="fr"] .names,html[lang="fr"] .guest{letter-spacing:.01em}
 html[lang="fr"] .names{font-size:40px}
+.contact-choice{margin:10px 0 18px}
+.contact-choice-title{display:block;font-size:13px;font-weight:700;margin-bottom:8px}
+.contact-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.contact-option{margin:0;cursor:pointer}
+.contact-option input{display:none}
+.contact-option span{display:block;text-align:center;padding:12px 8px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);font-weight:600}
+.contact-option input:checked+span{background:var(--rose);color:#fff;border-color:var(--rose)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -143,6 +150,21 @@ html[lang="fr"] .names{font-size:40px}
 <div class="err" id="err"></div>
 <label for="answer" data-k="lAns"></label><select id="answer"><option data-k="o1"></option><option data-k="o2"></option></select>
 <label for="people" data-k="lPeople"></label><input id="people" type="number" inputmode="numeric" min="1" max="10" value="1">
+
+<div class="contact-choice">
+  <span class="contact-choice-title" data-k="sendTo"></span>
+  <div class="contact-options">
+    <label class="contact-option">
+      <input type="radio" name="contact" value="achraf" checked>
+      <span>💬 Achraf</span>
+    </label>
+    <label class="contact-option">
+      <input type="radio" name="contact" value="oumaima">
+      <span>💬 Oumaima</span>
+    </label>
+  </div>
+</div>
+
 <label for="msg" data-k="lMsg"></label><textarea id="msg" rows="4" data-ph="phMsg"></textarea>
 <button class="btn primary" onclick="rsvp()" data-k="sendWa"></button>
 <button class="btn secondary" onclick="share()" data-k="share"></button>
@@ -156,8 +178,9 @@ html[lang="fr"] .names{font-size:40px}
 <audio id="audio" loop></audio>
 
 <script>
-var PHONE=["+212681716133","+212663897372"];
-var AUDIO_SRC="music.aac";
+var PHONE1="212663897372"; // Achraf
+var PHONE2="212681716133"; // Oumaima
+var AUDIO_SRC="music.mp3";
 var WEDDING=new Date("2026-10-10T14:00:00");
 
 var T={
@@ -176,7 +199,7 @@ back:"→",navLoc:"الموقع",meet:"لنلتقِ هناك",tapMap:"المسو
 navProg:"البرنامج",progLogo:"سهرة نتقاسمها معًا",e1:"استقبال الضيوف",e2:"المراسم",e3:"العشاء",e4:"سهرة موسيقية",e5:"نهاية الحفل",
 navRsvp:"التأكيد",rsvpLogo:"تأكيد الحضور",rsvpTitle:"حضوركم",deadline:"يرجى الرد قبل 1 أكتوبر 2026.",
 lName:"الاسم",phName:"الاسم الكامل",errName:"يرجى كتابة الاسم.",lAns:"ردّكم",o1:"سأحضر إن شاء الله ✅",o2:"لن أتمكن من الحضور ❌",
-lPeople:"عدد الأشخاص",lMsg:"رسالة (اختياري)",phMsg:"كلمة صغيرة للعروسين...",sendWa:"إرسال ردّي عبر واتساب",share:"مشاركة الدعوة",
+lPeople:"عدد الأشخاص",sendTo:"إرسال التأكيد إلى:",lMsg:"رسالة (اختياري)",phMsg:"كلمة صغيرة للعروسين...",sendWa:"إرسال ردّي عبر واتساب",share:"مشاركة الدعوة",
 ok:"ردّكم جاهز. سيُفتح واتساب الآن.",thanks:"شكرًا لكونكم جزءًا من قصتنا ♥",
 hi:"عزيزي/عزيزتي ",wa:"دعوة أميمة & أشرف",wName:"الاسم",wAns:"الرد",wCount:"العدد",wMsg:"رسالة",
 shareTxt:"أنتم مدعوون إلى زفاف أميمة & أشرف، يوم 10 أكتوبر 2026.",shareTitle:"دعوة",
@@ -196,7 +219,7 @@ back:"←",navLoc:"Le lieu",meet:"Rendez-vous là-bas",tapMap:"Touchez la carte 
 navProg:"Programme",progLogo:"Une soirée à partager",e1:"Accueil des invités",e2:"Cérémonie",e3:"Dîner",e4:"Soirée musicale",e5:"Fin de la fête",
 navRsvp:"Réponse",rsvpLogo:"Confirmation de présence",rsvpTitle:"Votre présence",deadline:"Merci de répondre avant le 1er octobre 2026.",
 lName:"Nom",phName:"Nom complet",errName:"Veuillez saisir votre nom.",lAns:"Votre réponse",o1:"Je serai présent(e) ✅",o2:"Je ne pourrai pas venir ❌",
-lPeople:"Nombre de personnes",lMsg:"Message (facultatif)",phMsg:"Un petit mot pour les mariés...",sendWa:"Envoyer ma réponse par WhatsApp",share:"Partager l'invitation",
+lPeople:"Nombre de personnes",sendTo:"Envoyer la confirmation à :",lMsg:"Message (facultatif)",phMsg:"Un petit mot pour les mariés...",sendWa:"Envoyer ma réponse par WhatsApp",share:"Partager l'invitation",
 ok:"Votre réponse est prête. WhatsApp va s'ouvrir.",thanks:"Merci de faire partie de notre histoire ♥",
 hi:"Cher(e) ",wa:"Invitation Oumaima & Achraf",wName:"Nom",wAns:"Réponse",wCount:"Nombre",wMsg:"Message",
 shareTxt:"Vous êtes invités au mariage d'Oumaima & Achraf, le 10 octobre 2026.",shareTitle:"Invitation",
@@ -266,13 +289,31 @@ setInterval(tick,1000);tick();
 
 function rsvp(){
   var t=T[L],n=document.getElementById('name').value.trim();
-  if(!n){document.getElementById('err').textContent=t.errName;document.getElementById('name').focus();return}
+  if(!n){
+    document.getElementById('err').textContent=t.errName;
+    document.getElementById('name').focus();
+    return;
+  }
+
   document.getElementById('err').textContent='';
   var a=document.getElementById('answer').value;
   var p=document.getElementById('people').value||1;
   var msg=document.getElementById('msg').value.trim()||'-';
-  var text=t.wa+'\n\n'+t.wName+': '+n+'\n'+t.wAns+': '+a+'\n'+t.wCount+': '+p+'\n'+t.wMsg+': '+msg;
-  window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(text),'_blank');
+  var contact=document.querySelector('input[name="contact"]:checked').value;
+
+  var phone = contact === 'achraf' ? PHONE1 : PHONE2;
+
+  var text=t.wa+'\n\n'+
+    t.wName+': '+n+'\n'+
+    t.wAns+': '+a+'\n'+
+    t.wCount+': '+p+'\n'+
+    t.wMsg+': '+msg;
+
+  window.open(
+    'https://wa.me/'+phone+'?text='+encodeURIComponent(text),
+    '_blank'
+  );
+
   document.getElementById('success').style.display='block';
 }
 function share(){
