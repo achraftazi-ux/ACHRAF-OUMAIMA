@@ -1,74 +1,67 @@
 <!doctype html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Oumima & Achraf — Invitation</title>
+<title>أميمة & أشرف — دعوة</title>
 <meta name="theme-color" content="#c98487">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@400;500&family=Montserrat:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&family=Great+Vibes&display=swap">
 <style>
 :root{--rose:#c98286;--rose2:#e9b9b7;--cream:#fff9f6;--ink:#563534;--gold:#b4874a;--card:#fff;--line:#edd7d3;--page:#eadfdb;--soft:#f1ddda;--softink:#70423f}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--cream:#2a1d1d;--ink:#f3e3e0;--card:#382626;--line:#553838;--page:#171010;--soft:#4a3030;--softink:#f0d5d1;--gold:#d9b06f}}
-:root[data-theme="dark"]{--cream:#2a1d1d;--ink:#f3e3e0;--card:#382626;--line:#553838;--page:#171010;--soft:#4a3030;--softink:#f0d5d1;--gold:#d9b06f}
 *{box-sizing:border-box}html{height:100%}
-body{margin:0;min-height:100%;background:var(--page);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;min-height:100%;background:var(--page);color:var(--ink);font-family:Cairo,system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 .app{width:min(480px,100%);margin:auto;background:var(--cream);min-height:100vh;box-shadow:0 0 45px #0002;position:relative;overflow:hidden}
 section{display:none;min-height:100vh;padding:28px 20px 40px;position:relative}
 section.on{display:block;animation:in .5s ease}
 #opening.on,#main.on{display:flex;align-items:center;justify-content:center;text-align:center}
 @keyframes in{from{opacity:0}to{opacity:1}}
-h1{font:500 32px "Playfair Display",serif;margin:10px 0}
-.script{font-family:"Great Vibes",cursive}.ar{font-family:Amiri,serif}
-.center{text-align:center}.muted{opacity:.75;font-size:13px;line-height:1.7}.gold{color:var(--gold)}
-.logo{letter-spacing:4px;font-size:12px}
-.btn{border:0;border-radius:30px;padding:14px 20px;font:600 13px Montserrat,sans-serif;cursor:pointer;text-decoration:none;display:block;text-align:center;margin:10px 0;width:100%}
+h1{font:700 30px Amiri,serif;margin:10px 0;line-height:1.6}
+.ar{font-family:Amiri,serif}
+.center{text-align:center}.muted{opacity:.8;font-size:14px;line-height:1.9}.gold{color:var(--gold)}
+.logo{font-size:13px;font-weight:600;color:var(--gold)}
+.btn{border:0;border-radius:30px;padding:13px 20px;font:700 14px Cairo,sans-serif;cursor:pointer;text-decoration:none;display:block;text-align:center;margin:10px 0;width:100%}
 .btn:focus-visible,.back:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .primary{background:var(--rose);color:#fff;box-shadow:0 8px 20px #c9828640}.secondary{background:var(--soft);color:var(--softink)}
 .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
 .back{border:0;background:none;font-size:22px;color:var(--ink);cursor:pointer;padding:4px 8px}
-/* Opening */
+.lang{display:inline-block;margin-top:8px;font-size:13px;color:var(--gold);text-decoration:underline}
 #opening{background:radial-gradient(circle at 50% 35%,var(--cream),#f7e7e3 70%,#ecd2ce)}
 @media(prefers-color-scheme:dark){#opening{background:radial-gradient(circle at 50% 35%,#3a2828,#241818)}}
-.env{width:290px;height:195px;background:#f3d9d5;position:relative;margin:26px auto 34px;border-radius:10px;box-shadow:0 18px 45px #70403b30;perspective:800px}
+.env{width:290px;height:195px;background:#f3d9d5;position:relative;margin:26px auto 34px;border-radius:10px;box-shadow:0 18px 45px #70403b30;perspective:800px;direction:ltr}
 .env .front{position:absolute;inset:0;background:#fff0ed;clip-path:polygon(0 100%,0 40%,50% 86%,100% 40%,100% 100%);border-radius:0 0 10px 10px;z-index:2}
 .env .flap{position:absolute;left:0;right:0;top:0;height:60%;background:#e8c4bf;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease,z-index 0s .4s;z-index:4}
-.env .card-in{position:absolute;left:10%;right:10%;top:10%;height:80%;background:#fff;border-radius:6px;transition:transform .9s ease .5s;z-index:1;display:grid;place-items:center;color:#563534;font:34px "Great Vibes",cursive}
+.env .card-in{position:absolute;left:10%;right:10%;top:10%;height:80%;background:#fff;border-radius:6px;transition:transform .9s ease .5s;z-index:1;display:grid;place-items:center;color:#563534;font:700 30px Amiri,serif}
 .seal{position:absolute;z-index:5;left:50%;top:52%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--rose);color:#fff;font-size:28px;box-shadow:0 5px 15px #0003;transition:opacity .3s}
 .opened .flap{transform:rotateX(180deg);z-index:0}.opened .seal{opacity:0}.opened .card-in{transform:translateY(-70px)}
-.guest{font-family:"Great Vibes",cursive;font-size:30px;color:var(--rose);min-height:36px}
-/* Hero */
+.guest{font:700 24px Amiri,serif;color:var(--rose);min-height:36px}
 .hero{background:linear-gradient(var(--cream),#f6e3df)}
 @media(prefers-color-scheme:dark){.hero{background:linear-gradient(#2a1d1d,#3a2626)}}
-.names{font-size:58px;line-height:1.05;color:var(--rose);margin:6px 0}
-.date{letter-spacing:3px;margin:14px 0;font-weight:500}
+.names{font:700 46px/1.3 Amiri,serif;color:var(--rose);margin:6px 0}
+.date{margin:14px 0;font-weight:700;font-size:16px}
 .count{display:flex;justify-content:center;gap:8px;margin:18px 0}
 .count div{background:var(--card);border-radius:12px;padding:10px 6px;min-width:64px;border:1px solid var(--line)}
-.count strong{display:block;font-size:20px}.count span{font-size:9px;opacity:.6;letter-spacing:1px}
-/* Petals */
+.count strong{display:block;font-size:20px}.count span{font-size:11px;opacity:.7}
 .petal{position:absolute;top:-30px;width:12px;height:16px;background:var(--rose2);border-radius:80% 0 80% 0;opacity:.7;animation:fall linear infinite;pointer-events:none;z-index:0}
 @keyframes fall{to{transform:translateY(110vh) rotate(360deg) translateX(40px)}}
-/* Cards */
 .cards{display:grid;gap:12px;margin:20px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;font-size:14px;line-height:1.6}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;font-size:15px;line-height:1.8}
 .card b{display:block;margin-bottom:4px}
-.quote{font:italic 400 17px/1.7 "Playfair Display",serif;text-align:center;margin:8px 0 22px}
-/* Timeline */
-.timeline{border-left:2px solid var(--rose2);margin:22px 8px;padding-left:22px}
-.event{position:relative;margin:0 0 24px;font-size:14px}
-.event:before{content:"";position:absolute;left:-30px;top:3px;width:11px;height:11px;border-radius:50%;background:var(--rose)}
-/* Map */
+.quote{font:400 20px/1.9 Amiri,serif;text-align:center;margin:8px 0 22px}
+.timeline{border-inline-start:2px solid var(--rose2);margin:22px 8px;padding-inline-start:22px}
+.event{position:relative;margin:0 0 24px;font-size:15px}
+.event:before{content:"";position:absolute;inset-inline-start:-30px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--rose)}
 .map{display:block;height:200px;border-radius:18px;background:#e8e3db;position:relative;overflow:hidden;margin:16px 0;text-decoration:none}
 .road{position:absolute;height:4px;background:#bbb3a8;transform:rotate(-12deg);left:-20%;right:-20%;top:40%;box-shadow:0 70px #bbb3a8,0 -70px #bbb3a8}
 .pin{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-size:46px;animation:bob 2s ease-in-out infinite}
 @keyframes bob{50%{transform:translate(-50%,-62%)}}
-.tag{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:#fff;color:#563534;font:600 11px Montserrat;padding:6px 12px;border-radius:20px;box-shadow:0 3px 10px #0002;white-space:nowrap}
-/* Form */
-label{font-size:12px;font-weight:600}
-input,textarea,select{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:14px Montserrat,sans-serif;margin:6px 0 14px}
-.success{display:none;background:#edf6e9;padding:14px;border-radius:14px;color:#386235;margin-top:12px;font-size:13px}
-.err{color:#b3261e;font-size:12px;min-height:16px;margin:-8px 0 8px}
-footer{text-align:center;padding:24px 0 0;font-size:11px;opacity:.65}
-.music{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--rose);color:#fff;z-index:20;box-shadow:0 6px 20px #0003;display:none;cursor:pointer}
+.tag{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:#fff;color:#563534;font:700 12px Cairo;padding:6px 12px;border-radius:20px;box-shadow:0 3px 10px #0002;white-space:nowrap}
+label{font-size:13px;font-weight:700}
+input,textarea,select{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:15px Cairo,sans-serif;margin:6px 0 14px}
+.success{display:none;background:#edf6e9;padding:14px;border-radius:14px;color:#386235;margin-top:12px;font-size:14px}
+.err{color:#b3261e;font-size:13px;min-height:16px;margin:-8px 0 8px}
+footer{text-align:center;padding:24px 0 0;font-size:13px;opacity:.7}
+.music{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--rose);color:#fff;z-index:20;box-shadow:0 6px 20px #0003;display:none;cursor:pointer}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -77,105 +70,101 @@ footer{text-align:center;padding:24px 0 0;font-size:11px;opacity:.65}
 
 <section id="opening" class="on">
 <div style="position:relative;z-index:1;width:100%">
-<div class="logo">INVITATION DIGITALE</div>
-<div class="env" id="env"><div class="card-in">O & A</div><div class="front"></div><div class="flap"></div><div class="seal">♡</div></div>
+<div class="logo">دعوة رقمية</div>
+<div class="env" id="env"><div class="card-in">أ & أ</div><div class="front"></div><div class="flap"></div><div class="seal">♡</div></div>
 <div class="guest" id="guest"></div>
-<div class="script" style="font-size:30px">Une invitation pour vous</div>
-<p class="muted">Ouvrez l'enveloppe pour découvrir les détails de notre mariage.</p>
-<button class="btn primary" onclick="openInvite()">Ouvrir l'invitation</button>
+<div class="ar" style="font-size:28px;font-weight:700">دعوة خاصة لكم</div>
+<p class="muted">افتحوا الظرف لتكتشفوا تفاصيل زفافنا.</p>
+<button class="btn primary" onclick="openInvite()">فتح الدعوة</button>
+<a class="lang" href="index.html">Français</a>
 </div>
 </section>
 
 <section id="main" class="hero">
 <div style="position:relative;z-index:1;width:100%">
 <div class="gold" style="font-size:24px">✦</div>
-<h1 class="ar" style="font-size:34px;font-weight:400" dir="rtl">باسم الله نبدأ، وببركته نمضي
-في يومٍ من أجمل أيام العمر
-
-نعلن عقد قران</h1>
-<div class="script names ar" style="font-family:Amiri,serif;font-size:44px">أميمة & أشرف</div>
-<div class="script names">Oumima & Achraf</div>
-<div class="date">SAMEDI 10 OCTOBRE 2026</div>
-<p class="muted">Nous avons le plaisir de vous inviter à partager avec nous ce jour exceptionnel.</p>
-<div class="count" aria-live="off">
-<div><strong id="d">--</strong><span>JOURS</span></div>
-<div><strong id="h">--</strong><span>HEURES</span></div>
-<div><strong id="m">--</strong><span>MIN</span></div>
-<div><strong id="s">--</strong><span>SEC</span></div>
+<h1 class="ar" style="font-size:26px;font-weight:400">باسم الله نبدأ، وببركته نمضي<br>في يومٍ من أجمل أيام العمر<br><br>نعلن عقد قران</h1>
+<div class="names">أميمة & أشرف</div>
+<div class="date">السبت 10 أكتوبر 2026</div>
+<p class="muted">يسعدنا أن ندعوكم لمشاركتنا هذا اليوم الاستثنائي.</p>
+<div class="count" dir="rtl">
+<div><strong id="d">--</strong><span>أيام</span></div>
+<div><strong id="h">--</strong><span>ساعات</span></div>
+<div><strong id="m">--</strong><span>دقائق</span></div>
+<div><strong id="s">--</strong><span>ثوانٍ</span></div>
 </div>
-<button class="btn primary" onclick="go('details')">Découvrir l'invitation</button>
+<button class="btn primary" onclick="go('details')">اكتشفوا الدعوة</button>
 </div>
 </section>
 
 <section id="details">
-<div class="nav"><b>Oumima & Achraf</b><button class="back" onclick="go('main')" aria-label="Retour">×</button></div>
-<div class="center"><div class="logo">NOTRE JOUR</div><h1>Les détails</h1></div>
-<p class="quote">« Deux cœurs, une seule histoire. Votre présence sera notre plus beau cadeau. »</p>
+<div class="nav"><b>أميمة & أشرف</b><button class="back" onclick="go('main')" aria-label="رجوع">×</button></div>
+<div class="center"><div class="logo">يومنا</div><h1>التفاصيل</h1></div>
+<p class="quote">«قلبان وحكاية واحدة. حضوركم هو أجمل هدية لنا.»</p>
 <div class="cards">
-<div class="card"><b>📅 Date</b>Samedi 10 octobre 2026</div>
-<div class="card"><b>🕰️ Heure</b>À partir de 14h00</div>
-<div class="card"><b>📍 Lieu</b>Salle des Fêtes<br><span class="muted">Ouvrir l'itinéraire dans Google Maps</span></div>
-<div class="card"><b>👗 Tenue</b>Élégante — caftan, takchita ou costume. Tons pastel bienvenus.</div>
+<div class="card"><b>📅 التاريخ</b>السبت 10 أكتوبر 2026</div>
+<div class="card"><b>🕰️ الوقت</b>ابتداءً من الساعة 14:00</div>
+<div class="card"><b>📍 المكان</b>قاعة الحفلات<br><span class="muted">افتحوا المسار في خرائط جوجل</span></div>
+<div class="card"><b>👗 اللباس</b>أنيق — قفطان أو تكشيطة أو بدلة. الألوان الهادئة (باستيل) مرحّب بها.</div>
 </div>
-<a class="btn primary" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mariage%20Oumima%20%26%20Achraf&dates=20261010T180000/20261011T000000&details=Nous%20avons%20le%20plaisir%20de%20vous%20inviter.&location=Salle%20des%20F%C3%AAtes">📆 Ajouter à mon calendrier</a>
-<button class="btn secondary" onclick="go('location')">📍 Voir la localisation</button>
-<button class="btn secondary" onclick="go('program')">🕐 Voir le programme</button>
-<button class="btn secondary" onclick="go('rsvp')">💌 Confirmer ma présence</button>
+<a class="btn primary" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D8%B2%D9%81%D8%A7%D9%81%20%D8%A3%D9%85%D9%8A%D9%85%D8%A9%20%D9%88%D8%A3%D8%B4%D8%B1%D9%81&dates=20261010T140000/20261011T000000&details=%D9%8A%D8%B3%D8%B9%D8%AF%D9%86%D8%A7%20%D8%A3%D9%86%20%D9%86%D8%AF%D8%B9%D9%88%D9%83%D9%85.&location=%D9%82%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AD%D9%81%D9%84%D8%A7%D8%AA">📆 إضافة إلى التقويم</a>
+<button class="btn secondary" onclick="go('location')">📍 عرض الموقع</button>
+<button class="btn secondary" onclick="go('program')">🕐 عرض البرنامج</button>
+<button class="btn secondary" onclick="go('rsvp')">💌 تأكيد حضوري</button>
 </section>
 
 <section id="location">
-<div class="nav"><b>Localisation</b><button class="back" onclick="go('details')" aria-label="Retour">←</button></div>
-<div class="center"><h1>Nous retrouver</h1><p class="muted">Touchez la carte pour ouvrir l'itinéraire.</p></div>
-<a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7" aria-label="Ouvrir dans Google Maps"><div class="road"></div><div class="pin">📍</div><div class="tag">Salle des Fêtes</div></a>
-<a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7">Ouvrir dans Google Maps</a>
-<button class="btn secondary" onclick="go('program')">Continuer vers le programme</button>
+<div class="nav"><b>الموقع</b><button class="back" onclick="go('details')" aria-label="رجوع">→</button></div>
+<div class="center"><h1>لنلتقِ هناك</h1><p class="muted">المسوا الخريطة لفتح المسار.</p></div>
+<a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7" aria-label="فتح في خرائط جوجل"><div class="road"></div><div class="pin">📍</div><div class="tag">قاعة الحفلات</div></a>
+<a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7">فتح في خرائط جوجل</a>
+<button class="btn secondary" onclick="go('program')">المتابعة إلى البرنامج</button>
 </section>
 
 <section id="program">
-<div class="nav"><b>Programme</b><button class="back" onclick="go('details')" aria-label="Retour">←</button></div>
-<div class="center"><div class="logo">UNE SOIRÉE À PARTAGER</div><h1>Programme</h1></div>
+<div class="nav"><b>البرنامج</b><button class="back" onclick="go('details')" aria-label="رجوع">→</button></div>
+<div class="center"><div class="logo">سهرة نتقاسمها معًا</div><h1>البرنامج</h1></div>
 <div class="timeline">
-<div class="event"><b>14h00</b><br>Accueil des invités</div>
-<div class="event"><b>18h00</b><br>Cérémonie</div>
-<div class="event"><b>20h00</b><br>Dîner</div>
-<div class="event"><b>22h00</b><br>Soirée musicale</div>
-<div class="event"><b>00h00</b><br>Fin de la soirée</div>
+<div class="event"><b>14:00</b><br>استقبال الضيوف</div>
+<div class="event"><b>18:00</b><br>المراسم</div>
+<div class="event"><b>20:00</b><br>العشاء</div>
+<div class="event"><b>22:00</b><br>سهرة موسيقية</div>
+<div class="event"><b>00:00</b><br>نهاية الحفل</div>
 </div>
-<button class="btn primary" onclick="go('rsvp')">💌 Confirmer ma présence</button>
+<button class="btn primary" onclick="go('rsvp')">💌 تأكيد حضوري</button>
 </section>
 
 <section id="rsvp">
-<div class="nav"><b>Confirmation</b><button class="back" onclick="go('details')" aria-label="Retour">←</button></div>
-<div class="center"><div class="logo">RSVP</div><h1>Votre présence</h1><p class="muted">Merci de répondre avant le 1er octobre 2026.</p></div>
-<label for="name">Votre nom</label><input id="name" placeholder="Nom et prénom" autocomplete="name">
+<div class="nav"><b>التأكيد</b><button class="back" onclick="go('details')" aria-label="رجوع">→</button></div>
+<div class="center"><div class="logo">تأكيد الحضور</div><h1>حضوركم</h1><p class="muted">يرجى الرد قبل 1 أكتوبر 2026.</p></div>
+<label for="name">الاسم</label><input id="name" placeholder="الاسم الكامل" autocomplete="name">
 <div class="err" id="err"></div>
-<label for="answer">Votre réponse</label><select id="answer"><option>Je serai présent(e) ✅</option><option>Je ne pourrai pas venir ❌</option></select>
-<label for="people">Nombre de personnes</label><input id="people" type="number" inputmode="numeric" min="1" max="10" value="1">
-<label for="msg">Message (optionnel)</label><textarea id="msg" rows="4" placeholder="Un petit mot pour les mariés..."></textarea>
-<button class="btn primary" onclick="rsvp()">Envoyer ma réponse sur WhatsApp</button>
-<button class="btn secondary" onclick="share()">Partager l'invitation</button>
-<div id="success" class="success">Votre réponse est prête. WhatsApp va s'ouvrir.</div>
-<footer>Merci de faire partie de notre histoire ♥</footer>
+<label for="answer">ردّكم</label><select id="answer"><option>سأحضر إن شاء الله ✅</option><option>لن أتمكن من الحضور ❌</option></select>
+<label for="people">عدد الأشخاص</label><input id="people" type="number" inputmode="numeric" min="1" max="10" value="1">
+<label for="msg">رسالة (اختياري)</label><textarea id="msg" rows="4" placeholder="كلمة صغيرة للعروسين..."></textarea>
+<button class="btn primary" onclick="rsvp()">إرسال ردّي عبر واتساب</button>
+<button class="btn secondary" onclick="share()">مشاركة الدعوة</button>
+<div id="success" class="success">ردّكم جاهز. سيُفتح واتساب الآن.</div>
+<footer>شكرًا لكونكم جزءًا من قصتنا ♥</footer>
 </section>
 
 </div>
-<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="Musique">♪</button>
+<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="الموسيقى">♪</button>
 <audio id="audio" loop></audio>
 
 <script>
 var PHONE="212752122418";
 var AUDIO_SRC="music.mp3";
-var WEDDING=new Date("2026-10-10T18:00:00");
+var WEDDING=new Date("2026-10-10T14:00:00");
 
 function go(id){
   document.querySelectorAll('section').forEach(function(x){x.classList.remove('on')});
-  var s=document.getElementById(id);s.classList.add('on');
+  document.getElementById(id).classList.add('on');
   window.scrollTo({top:0});
 }
 function openInvite(){
   document.getElementById('env').classList.add('opened');
-  var a=document.getElementById('audio');
-  if(AUDIO_SRC){try{a.play()}catch(e){}}
+  if(AUDIO_SRC){try{document.getElementById('audio').play()}catch(e){}}
   setTimeout(function(){go('main')},1700);
 }
 function tick(){
@@ -189,7 +178,6 @@ function tick(){
 }
 setInterval(tick,1000);tick();
 
-// Pétales
 (function(){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   var host=document.getElementById('main');
@@ -198,34 +186,34 @@ setInterval(tick,1000);tick();
     p.style.left=Math.random()*100+'%';
     p.style.animationDuration=(9+Math.random()*9)+'s';
     p.style.animationDelay=(-Math.random()*12)+'s';
-    p.style.transform='scale('+(0.6+Math.random()*0.8)+')';
     host.appendChild(p);
   }
 })();
 
-// Invité personnalisé : ajouter ?invite=Prenom a la fin du lien
+// ضيف مخصص: أضيفوا ?invite=الاسم في نهاية الرابط
 (function(){
   try{
     var n=new URLSearchParams(location.search).get('invite');
-    if(n){document.getElementById('guest').textContent='Cher(e) '+n;document.getElementById('name').value=n}
+    if(n){document.getElementById('guest').textContent='عزيزي/عزيزتي '+n;document.getElementById('name').value=n}
   }catch(e){}
 })();
 
 function rsvp(){
   var n=document.getElementById('name').value.trim();
-  if(!n){document.getElementById('err').textContent='Veuillez indiquer votre nom.';document.getElementById('name').focus();return}
+  if(!n){document.getElementById('err').textContent='يرجى كتابة الاسم.';document.getElementById('name').focus();return}
   document.getElementById('err').textContent='';
   var a=document.getElementById('answer').value;
   var p=document.getElementById('people').value||1;
   var msg=document.getElementById('msg').value.trim()||'-';
-  var text='Invitation Oumima & Achraf\n\nNom: '+n+'\nRéponse: '+a+'\nNombre: '+p+'\nMessage: '+msg;
+  var text='دعوة أميمة & أشرف\n\nالاسم: '+n+'\nالرد: '+a+'\nالعدد: '+p+'\nرسالة: '+msg;
   window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(text),'_blank');
   document.getElementById('success').style.display='block';
 }
 function share(){
-  var t='Vous êtes invité(e) au mariage d\'Oumima & Achraf, le 10 octobre 2026.';
-  if(navigator.share){navigator.share({title:'Invitation',text:t,url:location.href.split('?')[0]}).catch(function(){})}
-  else{window.open('https://wa.me/?text='+encodeURIComponent(t+' '+location.href.split('?')[0]),'_blank')}
+  var t='أنتم مدعوون إلى زفاف أميمة & أشرف، يوم 10 أكتوبر 2026.';
+  var u=location.href.split('?')[0];
+  if(navigator.share){navigator.share({title:'دعوة',text:t,url:u}).catch(function(){})}
+  else{window.open('https://wa.me/?text='+encodeURIComponent(t+' '+u),'_blank')}
 }
 if(AUDIO_SRC){document.getElementById('audio').src=AUDIO_SRC;document.getElementById('musicBtn').style.display='block'}
 function toggleMusic(){var a=document.getElementById('audio');a.paused?a.play():a.pause()}
