@@ -28,7 +28,6 @@ h1{font:500 32px "Playfair Display",serif;margin:10px 0}
 .back{border:0;background:none;font-size:22px;color:var(--ink);cursor:pointer;padding:4px 8px}
 /* Opening */
 #opening{background:radial-gradient(circle at 50% 35%,var(--cream),#f7e7e3 70%,#ecd2ce)}
-:root:not([data-theme="light"]) #opening{}
 @media(prefers-color-scheme:dark){#opening{background:radial-gradient(circle at 50% 35%,#3a2828,#241818)}}
 .env{width:290px;height:195px;background:#f3d9d5;position:relative;margin:26px auto 34px;border-radius:10px;box-shadow:0 18px 45px #70403b30;perspective:800px}
 .env .front{position:absolute;inset:0;background:#fff0ed;clip-path:polygon(0 100%,0 40%,50% 86%,100% 40%,100% 100%);border-radius:0 0 10px 10px;z-index:2}
@@ -124,9 +123,8 @@ footer{text-align:center;padding:24px 0 0;font-size:11px;opacity:.65}
 <section id="location">
 <div class="nav"><b>Localisation</b><button class="back" onclick="go('details')" aria-label="Retour">←</button></div>
 <div class="center"><h1>Nous retrouver</h1><p class="muted">Touchez la carte pour ouvrir l'itinéraire.</p></div>
-<a class="map" target="_blank" rel="noopener" href="https://maps.google.com/maps/search/10210/@33.98482131958008,-6.618976593017578,17z?hl=fr" aria-label="Ouvrir dans Google Maps"><div class="road"></div><div class="pin">📍</div><div class="tag">Salle des Fêtes</div></a>
-<a class="btn primary" target="_blank" rel="noopener" href="https://maps.google.com/maps/search/10210/@33.98482131958008,-6.618976593017578,17z?hl=fr">Ouvrir dans Google Maps</a>
-<a class="btn secondary" target="_blank" rel="noopener" href="https://waze.com/ul?ll=33.98482132,-6.61897659&navigate=yes">Y aller avec Waze</a>
+<a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7" aria-label="Ouvrir dans Google Maps"><div class="road"></div><div class="pin">📍</div><div class="tag">Salle des Fêtes</div></a>
+<a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KfhSs52HKaB6CJ1J7">Ouvrir dans Google Maps</a>
 <button class="btn secondary" onclick="go('program')">Continuer vers le programme</button>
 </section>
 
@@ -162,7 +160,7 @@ footer{text-align:center;padding:24px 0 0;font-size:11px;opacity:.65}
 <audio id="audio" loop></audio>
 
 <script>
-var PHONE="212752122418"; // ← numéro WhatsApp réel (format international, sans +)
+var PHONE="212752122418";
 var AUDIO_SRC="music.mp3";
 var WEDDING=new Date("2026-10-10T18:00:00");
 
